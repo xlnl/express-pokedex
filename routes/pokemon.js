@@ -4,7 +4,12 @@ var router = express.Router();
 // GET /pokemon - return a page with favorited Pokemon
 router.get('/', function(req, res) {
   // TODO: Get all records from the DB and render to view
-  res.send('Render a page of favorites here');
+  db.pokemon.findAll()
+  .then(foundPokemons => { 
+    res.render("pokemon/index", {pokemon: foundPokemons});
+  }) .catch(err => {
+    console.log(err);
+  });
   // db.pokemon.findAll()
   // render results file of that pokemon
 });
@@ -18,7 +23,6 @@ router.post('/', function(req, res) {
   // db.pokemon.findOrCreate()
   // redirect this to /pokemon
 });
-
 
 
 module.exports = router;

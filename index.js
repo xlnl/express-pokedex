@@ -11,6 +11,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(ejsLayouts);
 app.use(express.static("public")); 
+// links your css??
 
 // GET / - main index of site
 app.get('/', function(req, res) {
@@ -37,7 +38,7 @@ app.get('/', function(req, res) {
 //    we would use a get route with a db method find all favs and render the list of favorites
 
 
-// Imports all routes from the pokemon routes file
+// Imports all routes from the pokemon routes file 
 app.use('/pokemon', require('./routes/pokemon'));
 
 const server = app.listen(port, function() {

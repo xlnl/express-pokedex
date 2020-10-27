@@ -1,0 +1,11 @@
+<h1> Here are your favorite pokemons! </h1>
+
+<% pokemon.forEach(pokemon => { %>
+    <div class="well">
+        <h2>
+            <a href="/pokemon/<%= pokemon.name %>">
+                <%= pokemon.name %>
+            </a>
+        </h2>
+    </div>
+<% }); %>
