@@ -1,18 +1,19 @@
-<header>
+<header class="header">
     <nav class="text-center">
         <a href="/">Home</a>
         <a href="/pokemon">Favorites</a>
     </nav>
 </header>
 
-<h1> Here are your favorite pokemons! </h1>
-
-<% pokemon.forEach(pokemon => { %>
-    <div class="well">
-        <h2>
-            <a href="/pokemon/<%= pokemon.name %>">
-                <%= pokemon.name %>
-            </a>
-        </h2>
+<div id="faves" class="text-center">
+    <h1 class="title"> Here are your favorite pokemons! </h1>
+    <div class="favePoke" class="text-center">
+        <% pokemon.forEach(pokemon => { %>
+            <h3>
+                <a href="/pokemon/<%= pokemon.name %>">
+                    <%= pokemon.name %>
+                </a>
+            </h3>
+        <% }); %>
     </div>
-<% }); %>
+</div>

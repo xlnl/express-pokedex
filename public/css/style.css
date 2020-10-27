@@ -1,0 +1,54 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/28/d0/23/28d0231a25fc8a7ee02a9081251c47bf.png");
+}
+
+h1 {
+    text-align: center;
+    align-items: center;
+    color: rgb(8, 58, 37);
+    font-weight: bold;
+}
+
+.header {
+    color: white;
+    font-weight: bold;
+}
+
+#banner {
+    height: 100px;
+}
+
+#faves, .details {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.63);
+    border-radius: 20px;
+    margin: 50px;
+}
+
+
+.favePoke, #stats {
+    width: 50%;
+    flex: 0 auto;
+    align-self: center;
+    width: 500px;
+}
+
+.details {
+    color: rgb(27, 68, 52);
+}
+
+li {
+    list-style-type: none;
+}
+
+.title {
+    font-weight: bold;
+    width: 500px;
+    text-align: center;
+    align-items: center;
+}
