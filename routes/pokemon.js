@@ -3,8 +3,6 @@ var router = express.Router();
 const db = require("../models");
 const { default: Axios } = require('axios');
 
-
-
 // GET /pokemon - return a page with favorited Pokemon
 router.get('/', function(req, res) {
   // TODO: Get all records from the DB and render to view
@@ -18,7 +16,7 @@ router.get('/', function(req, res) {
 });
 
 // POST /pokemon - receive the name of a pokemon and add it to the database
-router.post('/', function(req, res) {
+router.post('/', (req, res) => {
   // TODO: Get form data and add a new record to DB
   db.pokemon.findOrCreate( {
     where: {name: req.body.name}
@@ -27,8 +25,10 @@ router.post('/', function(req, res) {
     console.log(pokemon)
     console.log("This was Pokemon entry created:", wasCreated)
     res.redirect("/pokemon");
-  }) .catch(err => {
+  }) 
+  .catch(err => {
     console.log(err);
+  })
 });
 
 

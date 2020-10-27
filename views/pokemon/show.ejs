@@ -1,11 +1,18 @@
+<header>
+    <nav class="text-center">
+        <a href="/">Home</a>
+        <a href="/pokemon">Favorites</a>
+    </nav>
+</header>
+
 <h1> More Details About Your Pokemon <%= pokemon.name %> </h1>
 
 <h2> Stats:</h2>
 <ul>
     <li>Type: <%= pokemon.types[0].type.name %></li>
-    <li>Species: <%= pokemon.species %></li>
-    <li>Height: <%= pokemon.height %></li>
-    <li>Abilities: <%= pokemon.abilities %></li>
-    <li>Moves: <%= pokemon.moves %></li>
+    <li>Species: <%= pokemon.species.name %></li>
+    <li>Forms: <%= pokemon.forms[0].name %></li>
+    <li>Abilities: <%= pokemon.abilities[0].ability.name %>, <%= pokemon.abilities[1].ability.name %></li>
+    <li>Moves: <%= pokemon.moves[0].move.name %></li>
 </ul>
 
